@@ -1,0 +1,148 @@
+.fa,
+.fas {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 1024px) {
+	.main_menu.main_menu_hide_on_mobile{
+		display:none;
+	}
+	.container{
+		max-width:90%;
+	}
+	/*Row and divide*/
+	.col-divide-lg-12 {
+        flex: auto;
+        max-width: 100%;
+    }
+
+	.col-divide-lg-6 {
+        flex: auto;
+        max-width: 48%;
+    }
+
+	.col-divide-lg-4 {
+        flex: auto;
+        max-width: 32%;
+    }
+
+	.col-divide-lg-3 {
+        flex: auto;
+        max-width: 24%;
+    }
+	/*Row and divide*/
+	.title--section,.title--item{
+		text-align: center;
+	}
+	figure{
+		max-width:100%!important;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+	/*Setup*/
+	body{
+		font-size:18px;
+	}
+	/*Row and divide*/
+	.col-divide-md-12 {
+        flex: auto;
+        max-width: 100%;
+    }
+
+	.col-divide-md-6 {
+        flex: auto;
+        max-width: 48%;
+    }
+
+	.col-divide-md-4 {
+        flex: auto;
+        max-width: 32%;
+    }
+
+	.col-divide-md-3 {
+        flex: auto;
+        max-width: 24%;
+    }
+	.title--section{
+		font-size:30px;
+		margin:22px 0px;
+	}
+	/*Row and divide*/
+	/*Setup*/
+
+}
+
+
+
+
+@media screen and (max-width: 438px) {
+	/*Setup*/
+	body {
+    transition: background-color .5s;
+	font-size:16px;
+    }
+
+	.title--section{
+		font-size:25px;
+		margin:22px 0px;
+	}
+	.title--item{
+	  font-size:22px;
+	}
+	/*Row and divide*/
+	.col-divide-sm-12 {
+        flex: auto;
+        max-width: 100%;
+    }
+
+	.col-divide-sm-6 {
+        flex: auto;
+        max-width: 48%;
+    }
+
+	.col-divide-sm-4 {
+        flex: auto;
+        max-width: 32%;
+    }
+
+	.col-divide-sm-3 {
+        flex: auto;
+        max-width: 24%;
+    }
+	/*Row and divide*/
+	.dp--none{
+		display:none;
+	}
+  .dp--block{
+		display:block;
+	}
+	/*Setup*/
+  .Bottom--Nav .Bottom--Nav__contain .Bottom--Nav__list{
+    display:block;
+  }
+  header .header__contain .header__item .header__navbar{
+    width:100%;
+    height:0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+  }
+  header .header__contain .header__item .header__navbar.is-expanded{
+    height:188px;
+  }
+
+  header .header__contain .header__item .header__navbar .header__navbar-item{
+    display:block;
+  }
+  header .header__contain{
+    display:block;
+  }
+  header .header__contain .header__brand{
+    text-align:center;
+  }
+}
