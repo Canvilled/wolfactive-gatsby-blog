@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Wolfactive Blogs Site`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Wolfactive đã thực hiện hơn 300+ dự án lớn nhỏ cho các đối tác trong và ngoài nước. Chúng tôi tự tin mang đến giá trị khác biệt cho dự án của bạn!`,
+    author: `Wolfactive, Huy Nguyễn, Phương Nam`,
+    keywords: `Thiết kế web chuẩn SEO, Thiết kế đồ họa, Branding, Thiết kế logo, Graphic Design, Web Develop, Lập trình webiste, Thiết kế website, lập trình web`,
+    image:`icons/icon-256x256.png`,
+    url: `http://blog.wolfactive.net/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
