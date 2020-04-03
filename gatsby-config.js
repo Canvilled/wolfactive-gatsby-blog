@@ -6,6 +6,7 @@ module.exports = {
     keywords: `Thiết kế web chuẩn SEO, Thiết kế đồ họa, Branding, Thiết kế logo, Graphic Design, Web Develop, Lập trình webiste, Thiết kế website, lập trình web`,
     image:`icons/icon-256x256.png`,
     url: `http://blog.wolfactive.net/`,
+    siteUrl: `http://blog.wolfactive.net/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -53,7 +54,7 @@ module.exports = {
                 collapseBooleanAttributes: false,
                 useShortDoctype: false
             }
-    },    
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
