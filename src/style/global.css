@@ -572,13 +572,15 @@ main .Post__item:hover .Post__item-title{
 }
 .Post__item .Post__item-img{
 	max-width: 416px;
-	max-height: 234.41px;
+	height: 234.41px;
 	overflow:hidden;
 }
 .Post__item .Post__item-img img{
 	transform: scale(1);
 	opacity: 1;
 	transition:all 0.3s linear;
+	height: 100%;
+  width: auto;
 }
 main .Post__item:hover  img{
 	opacity:0.7;
