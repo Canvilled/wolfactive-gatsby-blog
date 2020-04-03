@@ -19,6 +19,9 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            keywords
+            image
+            url
           }
         }
       }
@@ -67,13 +70,29 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `keywords`,
+          content: site.siteMetadata.keywords,
+        },
+        {
+          name: `robots`,
+          content: `index,follow`,
+        },
+        {
+          property:`og:image`,
+          content: `${site.siteMetadata.url}${site.siteMetadata.image}`,
+        },
+        {
+          property:`og:url`,
+          content: `${site.siteMetadata.url}`,
+        },
       ].concat(meta)}
     />
   )
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `vn`,
   meta: [],
   description: ``,
 }
