@@ -20,7 +20,11 @@ const PostItemsSide = () =>{
               }
             }
       `} render={props => props.allWordpressWpBlogs.edges.map(blogItem =>(
-          <div key={blogItem.node.id} className="Post__item-single mbt-25" >
+          <div
+            data-sal="slide-up"
+            data-sal-delay="500"
+            data-sal-easing="linear"
+            key={blogItem.node.id} className="Post__item-single mbt-25" >
             <Link to={`/${blogItem.node.slug}`} className="Post__item-single-img d--block">
               <img data-src={blogItem.node.featured_media.source_url} alt={blogItem.node.slug} className="lazyload"/>
             </Link>

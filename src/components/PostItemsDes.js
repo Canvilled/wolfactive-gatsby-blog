@@ -22,7 +22,11 @@ const PostItemsDes = () =>{
                     }
                   }
       `} render={props => props.allWordpressWpBlogs.edges.map(blogItem =>(
-          <div key={blogItem.node.id} className="Post__item col-divide-4 col-divide-md-6 col-divide-sm-12 my-15">
+          <div
+            data-sal="slide-up"
+            data-sal-delay="500"
+            data-sal-easing="linear"
+            key={blogItem.node.id} className="Post__item col-divide-4 col-divide-md-6 col-divide-sm-12 my-15">
             <Link to={`/${blogItem.node.slug}`} className="Post__item-img d--block">
               <img data-src={blogItem.node.featured_media.source_url} alt={blogItem.node.slug} className="lazyload"/>
             </Link>
