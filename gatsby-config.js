@@ -18,6 +18,16 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+    resolve: "gatsby-plugin-page-progress",
+    options: {
+      includePaths: [],
+      excludePaths: [],
+      height: 3,
+      prependToBody: false,
+      color: `#1c6182`
+    }
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
