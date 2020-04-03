@@ -48,7 +48,7 @@ module.exports = {
         theme_color: `#1c6182`,
         display: `standalone`,
       },
-    },`gatsby-plugin-offline`,
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
