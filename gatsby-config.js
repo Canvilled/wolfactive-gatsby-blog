@@ -4,7 +4,7 @@ module.exports = {
     description: `Wolfactive đã thực hiện hơn 300+ dự án lớn nhỏ cho các đối tác trong và ngoài nước. Chúng tôi tự tin mang đến giá trị khác biệt cho dự án của bạn!`,
     author: `Wolfactive, Huy Nguyễn, Phương Nam`,
     keywords: `Thiết kế web chuẩn SEO, Thiết kế đồ họa, Branding, Thiết kế logo, Graphic Design, Web Develop, Lập trình webiste, Thiết kế website, lập trình web`,
-    image:`static/icons/icon-256x256.png`,
+    image:`icons/icon-256x256.png`,
     url: `http://blog.wolfactive.net/`,
   },
   plugins: [
