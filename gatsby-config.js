@@ -37,7 +37,18 @@ module.exports = {
         protocol:`http`,
         hostingWPCOM: false,
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Wolfactive Blogs Site`,
+        short_name: `WolfactiveBlogs`,
+        start_url: `/`,
+        background_color: `#f2f4fb`,
+        theme_color: `#1c6182`,
+        display: `standalone`,
+      },
+    },`gatsby-plugin-offline`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
