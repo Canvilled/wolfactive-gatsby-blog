@@ -2,17 +2,50 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import PostItemsSide from "../components/PostItemsSide";
+import PageTransition from 'gatsby-plugin-page-transitions';
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  PinterestShareButton,
+  TwitterShareButton,
+  ViberShareButton,
+} from "react-share";
+import {
+  FacebookIcon,
+  LinkedinIcon,
+  PinterestIcon,
+  TwitterIcon,
+  ViberIcon,
+} from "react-share";
 
 export default ({pageContext}) =>(
+<PageTransition>
   <Layout>
   <SEO title={pageContext.title}/>
   <div className="blog__single my-50">
     <div className="row-divide">
       <div className="col-divide-9 col-divide-md-12">
         <div className="blog__single-img">
-          <img src={pageContext.featured_media.source_url} alt={pageContext.slug}/>
+          <img data-src={pageContext.featured_media.source_url} alt={pageContext.slug} className="lazyload"/>
         </div>
         <div className="blog__single-contain">
+          <div className="social--share">
+            <FacebookShareButton className="mxr-5" url={`https://blog.wolfactive.net/${pageContext.slug}`}>
+              <FacebookIcon size={32} round={true} />
+            </FacebookShareButton>
+            <LinkedinShareButton className="mxr-5" url={`https://blog.wolfactive.net/${pageContext.slug}`}>
+              <LinkedinIcon size={32} round={true} />
+            </LinkedinShareButton>
+            <PinterestShareButton className="mxr-5" url={`https://blog.wolfactive.net/${pageContext.slug}`}>
+              <PinterestIcon size={32} round={true} />
+            </PinterestShareButton>
+            <TwitterShareButton className="mxr-5" url={`https://blog.wolfactive.net/${pageContext.slug}`}>
+              <TwitterIcon size={32} round={true} />
+            </TwitterShareButton>
+            <ViberShareButton className="mxr-5" url={`https://blog.wolfactive.net/${pageContext.slug}`}>
+              <ViberIcon size={32} round={true} />
+            </ViberShareButton>
+          </div>
           <div className="date">
             <i className="far fa-calendar-alt"></i> {pageContext.date}
           </div>
@@ -62,4 +95,5 @@ export default ({pageContext}) =>(
     </div>
   </div>
 </Layout>
+</PageTransition>
 )

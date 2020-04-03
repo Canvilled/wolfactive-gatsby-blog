@@ -24,7 +24,7 @@ const PostItemsDes = () =>{
       `} render={props => props.allWordpressWpBlogs.edges.map(blogItem =>(
           <div key={blogItem.node.id} className="Post__item col-divide-4 col-divide-md-6 col-divide-sm-12 my-15">
             <Link to={`/${blogItem.node.slug}`} className="Post__item-img d--block">
-              <img src={blogItem.node.featured_media.source_url} alt={blogItem.node.slug}/>
+              <img data-src={blogItem.node.featured_media.source_url} alt={blogItem.node.slug} className="lazyload"/>
             </Link>
             <div className="Post__item-content">
               <div className="date">

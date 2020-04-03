@@ -145,4 +145,7 @@
   header .header__contain .header__brand{
     text-align:center;
   }
+  .blog__single .blog__single-contain{
+    padding:25px;
+  }
 }

@@ -470,6 +470,9 @@ a:hover{
   .py-12{
       padding:12px;
   }
+	.mxr-5{
+		margin-right:5px;
+	}
   .mx-15{
 	  margin:0px 15px;
   }
@@ -627,6 +630,15 @@ main .Post__item:hover  img{
 }
 .blog__single .blog__single-contain .blog__single-content figure{
 	text-align: center;
+}
+.blog__single .blog__single-contain .blog__single-content ul{
+	padding-left: 32px;
+  margin-bottom: 23px;
+	color: #1c6182;
+}
+.blog__single .blog__single-contain .blog__single-content iframe{
+	width:100%;
+	height: auto;
 }
 .blog__single .blog__single-contain img{
 	width: auto;

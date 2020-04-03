@@ -7,7 +7,7 @@ const Header = () => (
     <div className="header__contain container">
       <div className="header__item">
           <div className="header__brand">
-            <a href="http://wolfactive.net/"><img src={logo} alt="Logo-wolfactive" className="logo"/></a>
+            <a href="http://wolfactive.net/"><img data-src={logo} alt="Logo-wolfactive" className="logo lazyload" /></a>
           </div>
       </div>
       <div className="header__item">

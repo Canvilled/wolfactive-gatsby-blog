@@ -38,6 +38,22 @@ module.exports = {
         hostingWPCOM: false,
       }
     },
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
+    {
+      resolve: 'gatsby-plugin-page-transitions',
+      options: {
+        transitionTime: 500
+      }
+    },
+    {
+            resolve: 'gatsby-plugin-html-minifier',
+            options: {
+                caseSensitive: false,
+                collapseBooleanAttributes: false,
+                useShortDoctype: false
+            }
+    },    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

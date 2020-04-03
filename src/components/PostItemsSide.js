@@ -22,7 +22,7 @@ const PostItemsSide = () =>{
       `} render={props => props.allWordpressWpBlogs.edges.map(blogItem =>(
           <div key={blogItem.node.id} className="Post__item-single mbt-25" >
             <Link to={`/${blogItem.node.slug}`} className="Post__item-single-img d--block">
-              <img src={blogItem.node.featured_media.source_url} alt={blogItem.node.slug}/>
+              <img data-src={blogItem.node.featured_media.source_url} alt={blogItem.node.slug} className="lazyload"/>
             </Link>
             <div className="Post__item-single-content">
               <div className="date">
