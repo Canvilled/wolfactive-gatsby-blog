@@ -68,6 +68,10 @@ function SEO({ description, lang, meta, title, keywords, image, slug}) {
           content: metaDescription,
         },
         {
+          name: `twitter:image`,
+          content: image,
+        },
+        {
           name: `keywords`,
           content: keywords,
         },
