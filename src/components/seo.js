@@ -80,6 +80,10 @@ function SEO({ description, lang, meta, title, keywords, image, slug}) {
           content: image,
         },
         {
+          property:`og:type`,
+          content: `article`,
+        },
+        {
           property:`og:url`,
           content: `${site.siteMetadata.url}${slug}`,
         },
