@@ -20,7 +20,7 @@ class Navbar extends Component {
           <>
             <button
             className="btn d--none dp--block"
-            onClick={e => this.handleToggle(e)}>
+            onClick={e => this.handleToggle(e)} aria-label="Navbar Button Mobile">
             <i className="fas fa-bars navbar--icon text--light"></i></button>
             <ul className={`header__navbar ${isExpanded ? "is-expanded" : ""}`}>
               <li className="header__navbar-item">
