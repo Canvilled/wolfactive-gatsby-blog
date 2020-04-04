@@ -64,7 +64,7 @@ export default ({pageContext}) =>(
             <a href="https://www.facebook.com/Wolfactiveweb.design.SEO/" target="_blank" className="social--icon social--facebook">
               <i className="fab fa-facebook-square"></i>
             </a>
-            <a href="#" target="_blank" className="social--icon social--instagram">
+            <a href="https://www.instagram.com/designbyngan/channel/" target="_blank" className="social--icon social--instagram">
               <i className="fab fa-instagram"></i>
             </a>
             <a href="https://www.behance.net/kieungan16c6e9" target="_blank" className="social--icon social--behance">
