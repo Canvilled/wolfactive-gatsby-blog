@@ -21,7 +21,12 @@ import {
 export default ({pageContext}) =>(
 <PageTransition>
   <Layout>
-  <SEO title={pageContext.title}/>
+  <SEO title={pageContext.title}
+    description={pageContext.yoast_meta.yoast_wpseo_metadesc}
+    image={pageContext.featured_media.source_url}
+    keywords={pageContext.acf.keyword}
+    slug={pageContext.slug}
+   />
   <div className="blog__single my-50">
     <div className="row-divide">
       <div className="col-divide-9 col-divide-md-12">

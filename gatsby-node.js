@@ -83,6 +83,12 @@ exports.createPages = ({ graphql, actions }) => {
                     featured_media {
                       source_url
                     }
+                    yoast_meta {
+                     yoast_wpseo_metadesc
+                   }
+                   acf {
+                    keyword
+                   }
                   }
                 }
               }
