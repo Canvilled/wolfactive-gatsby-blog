@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Wolfactive Blogs Site`,
-    description: `Wolfactive đã thực hiện hơn 300+ dự án lớn nhỏ cho các đối tác trong và ngoài nước. Chúng tôi tự tin mang đến giá trị khác biệt cho dự án của bạn!`,
+    description: `Với nhiều năm kinh nghiệm trong lĩnh vực thiết kế, lập trình, tối ưu website...Wolfactive đã thực hiện hơn 300+ dự án lớn nhỏ cho các đối tác trong và ngoài nước. Chúng tôi tự tin mang đến giá trị khác biệt cho dự án của bạn!`,
     author: `Wolfactive, Huy Nguyễn, Phương Nam`,
-    keywords: `Thiết kế web chuẩn SEO, Thiết kế đồ họa, Branding, Thiết kế logo, Graphic Design, Web Develop, Lập trình webiste, Thiết kế website, lập trình web`,
+    keywords: `Thiết kế web chuẩn SEO, Thiết kế đồ họa, Branding, Thiết kế logo, Graphic Design, Web Develop, Lập trình webiste, Thiết kế website, lập trình web, Wolfactive, Thiết kế web Wolfactive, Thiết kế đồ họa Wolfactive, Thiết kế Logo Wolfactive, Web Development and Graphic Design Wolfactive, Team Freelancer Wolfactive`,
     image:`icons/icon-256x256.png`,
     url: `http://blog.wolfactive.net/`,
     siteUrl: `http://blog.wolfactive.net/`,
