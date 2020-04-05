@@ -41,7 +41,7 @@ export default ({pageContext}) =>(
             <LinkedinShareButton className="mxr-5" url={`https://blog.wolfactive.net/${pageContext.slug}`}>
               <LinkedinIcon size={32} round={true} />
             </LinkedinShareButton>
-            <PinterestShareButton className="mxr-5" url={`https://blog.wolfactive.net/${pageContext.slug}`}>
+            <PinterestShareButton className="mxr-5" url={`https://blog.wolfactive.net/${pageContext.slug}`} meta={pageContext.featured_media.source_url}>
               <PinterestIcon size={32} round={true} />
             </PinterestShareButton>
             <TwitterShareButton className="mxr-5" url={`https://blog.wolfactive.net/${pageContext.slug}`}>
