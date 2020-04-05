@@ -678,6 +678,9 @@ main .Post__item:hover  img{
 .social--icon.social--pinterest i{
 	color: #cb1b26;
 }
+.social--icon.social--github i{
+	color: #333;
+}
 /*----Single Blog----*/
 /*----Footer----*/
 /*----Footer----*/
