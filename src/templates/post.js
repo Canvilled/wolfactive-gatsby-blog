@@ -78,6 +78,9 @@ export default ({pageContext}) =>(
             <a href="https://www.pinterest.com/kieungan16109/" rel="noreferrer" target="_blank" className="social--icon social--pinterest">
               <i className="fab fa-pinterest-square"></i>
             </a>
+            <a href="https://github.com/Canvilled" rel="noreferrer" target="_blank" className="social--icon social--github">
+              <i class="fab fa-github-square"></i>
+            </a>
           </div>
         </div>
         <div className="sidebar__item">
