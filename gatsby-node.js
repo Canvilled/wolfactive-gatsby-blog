@@ -99,14 +99,6 @@ exports.createPages = ({ graphql, actions }) => {
             console.log(result.errors);
             reject(result.errors);
           }
-          createPaginatedPages({
-             edges: result.data.allWordpressWpBlogs.edges,
-             createPage: createPage,
-             pageTemplate: 'src/templates/index.js',
-             pageLength: 10, // This is optional and defaults to 10 if not used
-             pathPrefix: '', // This is optional and defaults to an empty string if not used
-             context: {}, // This is optional and defaults to an empty object if not used
-           })
           const postTemplate = path.resolve("./src/templates/post.js");
           // We want to create a detailed page for each
           // post node. We'll just use the WordPress Slug for the slug.
@@ -118,9 +110,224 @@ exports.createPages = ({ graphql, actions }) => {
               context: edge.node
             });
           });
-          resolve();
         });
-      });
+      })
     // ==== END POSTS ====
+    // ==== WEB PAGINATION ====
+    .then(()=>{
+      graphql(`
+                {
+                 allWordpressWpBlogs(sort: {fields: date, order: DESC}, filter: {blogsCat: {eq: 5}}) {
+                   edges {
+                     node {
+                       id
+                       title
+                       slug
+                       content
+                       date(formatString: "DD,MMMM, YYYY")
+                       featured_media {
+                         source_url
+                       }
+                     }
+                   }
+                 }
+               }
+      `).then(result =>{
+          if (result.errors) {
+            console.log(result.errors);
+            reject(result.errors);
+          }
+          const posts = result.data.allWordpressWpBlogs.edges;
+          const postPerPage = 9;
+          const numberOfPages = Math.ceil(posts.length / postPerPage);
+          const webPageTemplate = path.resolve('./src/templates/web-development.js');
+
+          Array.from({length: numberOfPages}).forEach((page, index) => {
+            createPage({
+              component: slash(webPageTemplate),
+              path:index === 0 ? '/web-development' : `/web-development/trang-${index + 1}`,
+              context: {
+                posts: posts.slice(index * postPerPage, (index * postPerPage) + postPerPage),
+                numberOfPages,
+                currentPage: index + 1
+              }
+            })
+          });
+      })
+    })
+    // ==== END WEB PAGINATION ====
+    // ==== SEO PAGINATION ====
+    .then(()=>{
+      graphql(`
+                {
+                 allWordpressWpBlogs(sort: {fields: date, order: DESC}, filter: {blogsCat: {eq: 10}}) {
+                   edges {
+                     node {
+                       id
+                       title
+                       slug
+                       content
+                       date(formatString: "DD,MMMM, YYYY")
+                       featured_media {
+                         source_url
+                       }
+                     }
+                   }
+                 }
+               }
+      `).then(result =>{
+          if (result.errors) {
+            console.log(result.errors);
+            reject(result.errors);
+          }
+          const posts = result.data.allWordpressWpBlogs.edges;
+          const postPerPage = 6;
+          const numberOfPages = Math.ceil(posts.length / postPerPage);
+          const contentPageTemplate = path.resolve('./src/templates/content.js');
+
+          Array.from({length: numberOfPages}).forEach((page, index) => {
+            createPage({
+              component: slash(contentPageTemplate),
+              path:index === 0 ? '/content' : `/content/trang-${index + 1}`,
+              context: {
+                posts: posts.slice(index * postPerPage, (index * postPerPage) + postPerPage),
+                numberOfPages,
+                currentPage: index + 1
+              }
+            })
+          });
+      })
+    })
+    // ==== END DESIGN  PAGINATION ====
+    // ==== SEO PAGINATION ====
+    .then(()=>{
+      graphql(`
+                {
+                 allWordpressWpBlogs(sort: {fields: date, order: DESC}, filter: {blogsCat: {eq: 6}}) {
+                   edges {
+                     node {
+                       id
+                       title
+                       slug
+                       content
+                       date(formatString: "DD,MMMM, YYYY")
+                       featured_media {
+                         source_url
+                       }
+                     }
+                   }
+                 }
+               }
+      `).then(result =>{
+          if (result.errors) {
+            console.log(result.errors);
+            reject(result.errors);
+          }
+          const posts = result.data.allWordpressWpBlogs.edges;
+          const postPerPage = 6;
+          const numberOfPages = Math.ceil(posts.length / postPerPage);
+          const designPageTemplate = path.resolve('./src/templates/graphical-design.js');
+
+          Array.from({length: numberOfPages}).forEach((page, index) => {
+            createPage({
+              component: slash(designPageTemplate),
+              path:index === 0 ? '/graphical-design' : `/graphical-design/trang-${index + 1}`,
+              context: {
+                posts: posts.slice(index * postPerPage, (index * postPerPage) + postPerPage),
+                numberOfPages,
+                currentPage: index + 1
+              }
+            })
+          });
+      })
+    })
+    // ==== END DESIGN PAGINATION ====
+    // ==== SEO PAGINATION ====
+    .then(()=>{
+      graphql(`
+                {
+                 allWordpressWpBlogs(sort: {fields: date, order: DESC}, filter: {blogsCat: {eq: 11}}) {
+                   edges {
+                     node {
+                       id
+                       title
+                       slug
+                       content
+                       date(formatString: "DD,MMMM, YYYY")
+                       featured_media {
+                         source_url
+                       }
+                     }
+                   }
+                 }
+               }
+      `).then(result =>{
+          if (result.errors) {
+            console.log(result.errors);
+            reject(result.errors);
+          }
+          const posts = result.data.allWordpressWpBlogs.edges;
+          const postPerPage = 6;
+          const numberOfPages = Math.ceil(posts.length / postPerPage);
+          const seoPageTemplate = path.resolve('./src/templates/seo.js');
+
+          Array.from({length: numberOfPages}).forEach((page, index) => {
+            createPage({
+              component: slash(seoPageTemplate),
+              path:index === 0 ? '/seo' : `/seo/trang-${index + 1}`,
+              context: {
+                posts: posts.slice(index * postPerPage, (index * postPerPage) + postPerPage),
+                numberOfPages,
+                currentPage: index + 1
+              }
+            })
+          });
+      })
+    })
+    // ==== END SEO PAGINATION ====
+    // ==== INDEX PAGINATION ====
+    .then(()=>{
+      graphql(`
+                {
+                 allWordpressWpBlogs(sort: {fields: date, order: DESC}) {
+                   edges {
+                     node {
+                       id
+                       title
+                       slug
+                       content
+                       date(formatString: "DD,MMMM, YYYY")
+                       featured_media{
+                         source_url
+                         }
+                       }
+                   }
+                 }
+               }
+      `).then(result =>{
+          if (result.errors) {
+            console.log(result.errors);
+            reject(result.errors);
+          }
+          const posts = result.data.allWordpressWpBlogs.edges;
+          const postPerPage = 6;
+          const numberOfPages = Math.ceil(posts.length / postPerPage);
+          const indexPageTemplate = path.resolve('./src/templates/index.js');
+
+          Array.from({length: numberOfPages}).forEach((page, index) => {
+            createPage({
+              component: slash(indexPageTemplate),
+              path:index === 0 ? '/' : `/trang-${index + 1}`,
+              context: {
+                posts: posts.slice(index * postPerPage, (index * postPerPage) + postPerPage),
+                numberOfPages,
+                currentPage: index + 1
+              }
+            })
+          });
+        resolve();
+      })
+    })
+    // ==== END INDEX PAGINATION ====
   });
 };

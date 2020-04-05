@@ -681,6 +681,25 @@ main .Post__item:hover  img{
 .social--icon.social--github i{
 	color: #333;
 }
+.pagination .pagination__container{
+	text-align: center;
+	margin: 30px 0px;
+}
+.pagination .pagination__container .pagination__item{
+	display: inline-block;
+	margin: 10px;
+}
+.pagination .pagination__container .pagination__item .pagination__number{
+	padding: 5px 15px;
+	color: var(--primary-color);
+	font-weight:600;
+	background: #1c61821a;
+	transition: all 0.4s linear;
+}
+.pagination .pagination__container .pagination__item.active .pagination__number,.pagination .pagination__container .pagination__item .pagination__number:hover{
+	color: #fff;
+	background: var(--primary-bg-color);
+}
 /*----Single Blog----*/
 /*----Footer----*/
 /*----Footer----*/
