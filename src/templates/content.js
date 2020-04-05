@@ -9,7 +9,7 @@ export default ({pageContext}) =>(
     <Layout>
       <SEO title="Content"/>
       <h2 className="title--section text--center my-15">Chuyên mục: CONTENT</h2>
-        <div className="row-divide my-50">
+        <div className="row-divide my-50 pageTemplate--contain">
           {pageContext.posts.map(blogItem =>(
             <div
               data-sal="slide-up"

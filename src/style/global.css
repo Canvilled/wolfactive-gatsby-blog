@@ -713,3 +713,6 @@ main .Post__item:hover  img{
  }
 /*----Footer---*/
 /*-----=======Code Here=====-----*/
+.pageTemplate--contain{
+	min-height:100vh;
+}

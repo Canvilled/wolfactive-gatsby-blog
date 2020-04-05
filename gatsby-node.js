@@ -181,7 +181,7 @@ exports.createPages = ({ graphql, actions }) => {
             reject(result.errors);
           }
           const posts = result.data.allWordpressWpBlogs.edges;
-          const postPerPage = 6;
+          const postPerPage = 9;
           const numberOfPages = Math.ceil(posts.length / postPerPage);
           const contentPageTemplate = path.resolve('./src/templates/content.js');
 
@@ -224,7 +224,7 @@ exports.createPages = ({ graphql, actions }) => {
             reject(result.errors);
           }
           const posts = result.data.allWordpressWpBlogs.edges;
-          const postPerPage = 6;
+          const postPerPage = 9;
           const numberOfPages = Math.ceil(posts.length / postPerPage);
           const designPageTemplate = path.resolve('./src/templates/graphical-design.js');
 
@@ -267,7 +267,7 @@ exports.createPages = ({ graphql, actions }) => {
             reject(result.errors);
           }
           const posts = result.data.allWordpressWpBlogs.edges;
-          const postPerPage = 6;
+          const postPerPage = 9;
           const numberOfPages = Math.ceil(posts.length / postPerPage);
           const seoPageTemplate = path.resolve('./src/templates/seo.js');
 
@@ -310,7 +310,7 @@ exports.createPages = ({ graphql, actions }) => {
             reject(result.errors);
           }
           const posts = result.data.allWordpressWpBlogs.edges;
-          const postPerPage = 6;
+          const postPerPage = 9;
           const numberOfPages = Math.ceil(posts.length / postPerPage);
           const indexPageTemplate = path.resolve('./src/templates/index.js');
 
