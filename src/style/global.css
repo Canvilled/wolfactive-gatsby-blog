@@ -615,7 +615,10 @@ main .Post__item:hover  img{
 	width:0;
 	transition: all 0.4s linear;
 }
-.Bottom--Nav .Bottom--Nav__contain .Bottom--Nav__list .Bottom--Nav__item a:hover:after{
+.Bottom--Nav .Bottom--Nav__contain .Bottom--Nav__list .Bottom--Nav__item a.active{
+	color: var(--primary-bg-color)
+}
+.Bottom--Nav .Bottom--Nav__contain .Bottom--Nav__list .Bottom--Nav__item a.active:after,.Bottom--Nav .Bottom--Nav__contain .Bottom--Nav__list .Bottom--Nav__item a:hover:after{
 	width:100%;
 }
 /*----Bottom Nav----*/

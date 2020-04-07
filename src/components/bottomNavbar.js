@@ -1,6 +1,10 @@
-import { Link } from "gatsby";
-import React from "react";
+import { Link } from "gatsby"
+import React from "react"
 
+const isActive = ({ isCurrent }) =>{
+  return{ className: isCurrent ? 'active' : ''}
+}
+const NavLink = props => <Link getProps={isActive} {...props} />
 const Bottom = () =>{
   return(
       <div className="Bottom--Nav">
@@ -8,25 +12,25 @@ const Bottom = () =>{
         <div className="Bottom--Nav__list">
           <div className="Bottom--Nav__item">
             <h3>
-               <Link to="/">Tất cả</Link>
+               <NavLink to="/">Tất cả</NavLink>
             </h3>
           </div>
           <div className="Bottom--Nav__item">
-           <h2><Link to="/web-development">Web Development</Link></h2>
+           <h2><NavLink to="/web-development">Development</NavLink></h2>
           </div>
           <div className="Bottom--Nav__item">
           <h2>
-            <Link to="/graphical-design">Graphical Design</Link>
+            <NavLink to="/graphical-design">Design</NavLink>
           </h2>
           </div>
           <div className="Bottom--Nav__item">
           <h3>
-            <Link to="/content">Content</Link>
+            <NavLink to="/content">Content</NavLink>
           </h3>
           </div>
           <div className="Bottom--Nav__item">
           <h3>
-            <Link to="/seo">SEO</Link>
+            <NavLink to="/seo">SEO</NavLink>
           </h3>
           </div>
         </div>

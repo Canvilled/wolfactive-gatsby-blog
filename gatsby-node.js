@@ -149,7 +149,8 @@ exports.createPages = ({ graphql, actions }) => {
               context: {
                 posts: posts.slice(index * postPerPage, (index * postPerPage) + postPerPage),
                 numberOfPages,
-                currentPage: index + 1
+                currentPage: index + 1,
+                isFirstPage: index === 0
               }
             })
           });
@@ -192,7 +193,8 @@ exports.createPages = ({ graphql, actions }) => {
               context: {
                 posts: posts.slice(index * postPerPage, (index * postPerPage) + postPerPage),
                 numberOfPages,
-                currentPage: index + 1
+                currentPage: index + 1,
+                isFirstPage: index === 0
               }
             })
           });
@@ -235,7 +237,8 @@ exports.createPages = ({ graphql, actions }) => {
               context: {
                 posts: posts.slice(index * postPerPage, (index * postPerPage) + postPerPage),
                 numberOfPages,
-                currentPage: index + 1
+                currentPage: index + 1,
+                isFirstPage: index === 0
               }
             })
           });
@@ -278,7 +281,8 @@ exports.createPages = ({ graphql, actions }) => {
               context: {
                 posts: posts.slice(index * postPerPage, (index * postPerPage) + postPerPage),
                 numberOfPages,
-                currentPage: index + 1
+                currentPage: index + 1,
+                isFirstPage: index === 0
               }
             })
           });
@@ -321,7 +325,8 @@ exports.createPages = ({ graphql, actions }) => {
               context: {
                 posts: posts.slice(index * postPerPage, (index * postPerPage) + postPerPage),
                 numberOfPages,
-                currentPage: index + 1
+                currentPage: index + 1,
+                isFirstPage: index === 0
               }
             })
           });
