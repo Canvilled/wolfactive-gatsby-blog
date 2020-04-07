@@ -50,7 +50,7 @@ export default ({data,pageContext}) =>{
                 {((currentPage === 1 )&&(numberOfPages !== 1))&& (
                   <>
                   <div className="pagination__item">
-                    <Link to="web-development" rel="current" className="pagination__number">
+                    <Link to="web-development" rel="current" className="pagination__number active">
                       {currentPage }
                     </Link>
                   </div>
@@ -69,7 +69,7 @@ export default ({data,pageContext}) =>{
                     </Link>
                   </div>
                   <div className="pagination__item">
-                    <Link to="web-development" rel="current" className="pagination__number">
+                    <Link to="web-development" rel="current" className="pagination__number active">
                       {currentPage }
                     </Link>
                   </div>
@@ -83,7 +83,7 @@ export default ({data,pageContext}) =>{
                     </Link>
                   </div>
                   <div className="pagination__item">
-                    <Link to="web-development" rel="current" className="pagination__number">
+                    <Link to="web-development" rel="current" className="pagination__number active">
                       {currentPage }
                     </Link>
                   </div>

@@ -54,7 +54,7 @@ const IndexPage = ({data,pageContext}) => {
                  {currentPage === 1 && (
                    <>
                    <div className="pagination__item">
-                     <Link to="/" rel="current" className="pagination__number">
+                     <Link to="/" rel="current" className="pagination__number active">
                        {currentPage }
                      </Link>
                    </div>
@@ -73,7 +73,7 @@ const IndexPage = ({data,pageContext}) => {
                      </Link>
                    </div>
                    <div className="pagination__item">
-                     <Link to="/" rel="current" className="pagination__number">
+                     <Link to="/" rel="current" className="pagination__number active">
                        {currentPage }
                      </Link>
                    </div>
@@ -87,7 +87,7 @@ const IndexPage = ({data,pageContext}) => {
                      </Link>
                    </div>
                    <div className="pagination__item">
-                     <Link to="/" rel="current" className="pagination__number">
+                     <Link to="/" rel="current" className="pagination__number active">
                        {currentPage }
                      </Link>
                    </div>
