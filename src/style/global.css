@@ -699,7 +699,7 @@ main .Post__item:hover  img{
 	background: #1c61821a;
 	transition: all 0.4s linear;
 }
-.pagination .pagination__container .pagination__item.active .pagination__number,.pagination .pagination__container .pagination__item .pagination__number:hover{
+.pagination .pagination__container .pagination__item .pagination__number.active,.pagination .pagination__container .pagination__item .pagination__number:hover{
 	color: #fff;
 	background: var(--primary-bg-color);
 }
