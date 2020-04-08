@@ -742,6 +742,7 @@ main .Post__item:hover  img{
 }
 .search .search__result{
 	position: absolute;
+	padding: 0px 0px;
   z-index: 10000;
   background: #fff;
   max-width: 450px;

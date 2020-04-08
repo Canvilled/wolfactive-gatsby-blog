@@ -22,7 +22,7 @@ const IndexPage = ({data,pageContext}) => {
         keywords="Wolfactive, Thiết kế web Wolfactive, Thiết kế logo Wolfactive, Thiết kế đồ họa Wolfactive"
          />
        <Search/>
-          <div className="row-divide my-50 pageTemplate--contain">
+          <div className="row-divide pageTemplate--contain">
              {pageContext.posts.map(blogItem =>(
                <div
                  data-sal="slide-up"

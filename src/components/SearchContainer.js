@@ -90,7 +90,7 @@ class Search extends Component {
               />
             </div>
           </form>
-          <div  className={ queryResults === blogList ? 'search__result' :'search__result active'}>
+          <div  className={ ((queryResults === blogList)&&(queryResults.length === 0)) ? 'search__result' :'search__result active'}>
             <div className="mxl-20">
             <b>Số lượng:
             {queryResults.length}</b>
