@@ -473,6 +473,9 @@ a:hover{
 	.mxr-5{
 		margin-right:5px;
 	}
+	.mxl-20{
+	  margin-left: 20px;
+  }
   .mx-15{
 	  margin:0px 15px;
   }
@@ -703,7 +706,74 @@ main .Post__item:hover  img{
 	color: #fff;
 	background: var(--primary-bg-color);
 }
-/*----Single Blog----*/
+/*---Search----*/
+.search .search__contain{
+	position: relative;
+}
+.search .search__form {
+	text-align: right;
+  margin-top: 1.45rem;
+}
+.search .search__form .search__form-input{
+	display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.search .search__form .search__form-input label{
+		display: inline-block;
+    height: 24px;
+    width: 24px;
+    background: #fff;
+    text-align: center;
+    border-top: 1px solid var(--primary-bg-color);
+    border-bottom: 1px solid var(--primary-bg-color);
+    border-left: 1px solid var(--primary-bg-color);
+}
+.search .search__form .search__form-input label i{
+	line-height: 22px;
+}
+.search .search__form .search__form-input input{
+	border: none;
+	border-top: 1px solid var(--primary-bg-color);
+	border-bottom: 1px solid var(--primary-bg-color);
+	border-right: 1px solid var(--primary-bg-color);
+	outline-color: transparent;
+	width: 425px;
+}
+.search .search__result{
+	position: absolute;
+  z-index: 10000;
+  background: #fff;
+  max-width: 450px;
+  box-shadow: 0 10px 24px -10px rgba(0,0,0,.12);
+  right: 0;
+  top: 24px;
+	height: 0px;
+	overflow: hidden;
+	transition: all 0.25s linear;
+}
+.search .search__result.active{
+  padding: 10px 0px;
+	height: max-content;
+}
+.search .search__result .search__result-list .search__result-item{
+	display: flex;
+  align-items: center;
+  margin: 10px 0px;
+	background: #fff;
+	transition: all 0.4s linear;
+	padding: 10px 20px;
+}
+.search .search__result .search__result-list .search__result-item:hover{
+	background: #dce5ee;
+}
+.search .search__result .search__result-list .search__result-item .search__result-item-img img{
+	width: 80px;
+}
+.search .search__result .search__result-list .search__result-item .search__result-item-title{
+	margin-left: 20px;
+}
+/*---Search----*/
 /*----Footer----*/
 /*----Footer----*/
  .footer__sub{

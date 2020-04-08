@@ -1,8 +1,10 @@
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Search from "../components/SearchContainer";
 import PageTransition from 'gatsby-plugin-page-transitions';
 import {Link} from "gatsby"
+
 
 const IndexPage = ({data,pageContext}) => {
   const {currentPage, isFirstPage,numberOfPages} = pageContext;
@@ -18,7 +20,9 @@ const IndexPage = ({data,pageContext}) => {
         description="Với nhiều năm kinh nghiệm trong lĩnh vực thiết kế, lập trình, tối ưu website...Wolfactive đã thực hiện hơn 300+ dự án lớn nhỏ cho các đối tác trong và ngoài nước. Chúng tôi tự tin mang đến giá trị khác biệt cho dự án của bạn!"
         image="http://blog.wolfactive.net/icons/icon-256x256.png"
         keywords="Wolfactive, Thiết kế web Wolfactive, Thiết kế logo Wolfactive, Thiết kế đồ họa Wolfactive"
-         />  <div className="row-divide my-50 pageTemplate--contain">
+         />
+       <Search/>
+          <div className="row-divide my-50 pageTemplate--contain">
              {pageContext.posts.map(blogItem =>(
                <div
                  data-sal="slide-up"

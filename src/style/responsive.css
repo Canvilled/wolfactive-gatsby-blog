@@ -75,7 +75,12 @@
 	}
 	/*Row and divide*/
 	/*Setup*/
-
+  .search .search__form .search__form-input label{
+    height: 29px;
+  }
+  .search .search__form .search__form-input label i{
+    line-height: 23.8px;
+  }
 }
 
 
@@ -147,5 +152,14 @@
   }
   .blog__single .blog__single-contain{
     padding:25px;
+  }
+  .search .search__form .search__form-input label{
+    height: 26px;
+  }
+  .search .search__form .search__form-input input{
+    width: 316px;
+  }
+  .search .search__result{
+    top:26px;
   }
 }
