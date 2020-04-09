@@ -58,7 +58,7 @@ export default ({pageContext}) =>(
               {pageContext.title}
             </h2>
             <div className="blog__single-content" dangerouslySetInnerHTML={{__html: pageContext.content}} />
-            <div className="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="949" data-numposts="5"></div>
+            <div className="fb-comments" data-href="http://blog.wolfactive.net/" data-width="949" data-numposts="5"></div>
         </div>
       </div>
       <div className="sidebar col-divide-3 col-divide-md-12">
