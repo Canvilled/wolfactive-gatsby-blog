@@ -17,6 +17,7 @@ import {
   TwitterIcon,
   ViberIcon,
 } from "react-share";
+import { FacebookProvider, Comments,Like } from 'react-facebook';
 
 export default ({pageContext}) =>(
 <PageTransition>
@@ -35,6 +36,11 @@ export default ({pageContext}) =>(
         </div>
         <div className="blog__single-contain">
           <div className="social--share">
+            <div className="my-10">
+              <FacebookProvider  appId="271192993891621">
+                <Like  href="https://www.facebook.com/Wolfactiveweb.design.SEO" colorScheme="dark" showFaces />
+              </FacebookProvider>
+            </div>
             <FacebookShareButton className="mxr-5" url={`https://blog.wolfactive.net/${pageContext.slug}`}>
               <FacebookIcon size={32} round={true} />
             </FacebookShareButton>
@@ -58,7 +64,9 @@ export default ({pageContext}) =>(
               {pageContext.title}
             </h2>
             <div className="blog__single-content" dangerouslySetInnerHTML={{__html: pageContext.content}} />
-            <div className="fb-comments" data-href="http://blog.wolfactive.net/" data-width="949" data-numposts="5"></div>
+              <FacebookProvider appId="271192993891621">
+                  <Comments href="https://www.facebook.com/Wolfactiveweb.design.SEO" />
+              </FacebookProvider>
         </div>
       </div>
       <div className="sidebar col-divide-3 col-divide-md-12">
@@ -94,7 +102,6 @@ export default ({pageContext}) =>(
           </div>
         </div>
         <div className="sidebar__item">
-
           <h3 className="sidebar__title text--upcase">
             bài viết mới nhất
           </h3>
