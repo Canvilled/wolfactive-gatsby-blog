@@ -637,6 +637,10 @@ main .Post__item:hover  img{
 .blog__single .blog__single-contain{
 	padding: 30px 50px;
 }
+.blog__single .blog__single-contain .fb-like.fb_iframe_widget{
+	width: 100%;
+	overflow: hidden;
+}
 .blog__single .blog__single-contain .blog__single-content p{
 	margin: 0 0 0.5rem !important;
 }
