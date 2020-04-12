@@ -60,9 +60,7 @@ export default ({pageContext}) =>(
           <div className="date">
             <i className="far fa-calendar-alt"></i> {pageContext.date}
           </div>
-            <h2 className="title--section">
-              {pageContext.title}
-            </h2>
+            <h2 className="title--section" dangerouslySetInnerHTML={{__html: pageContext.title}} />
             <div className="blog__single-content" dangerouslySetInnerHTML={{__html: pageContext.content}} />
               <FacebookProvider appId="271192993891621">
                   <Comments href="https://www.facebook.com/Wolfactiveweb.design.SEO" />
