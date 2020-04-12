@@ -42,7 +42,7 @@ module.exports = {
     resolve: `gatsby-source-wordpress`,
     options:{
         baseUrl:`wolfactive.net`,
-        protocol:`http`,
+        protocol:`https`,
         hostingWPCOM: false,
       }
     },

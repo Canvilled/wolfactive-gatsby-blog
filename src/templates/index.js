@@ -24,10 +24,7 @@ const IndexPage = ({data,pageContext}) => {
        <Search/>
           <div className="row-divide pageTemplate--contain">
              {pageContext.posts.map(blogItem =>(
-               <div
-                 data-sal="slide-up"
-                 data-sal-delay="300"
-                 data-sal-easing="linear"
+               <div                 
                  key={blogItem.node.id} className="Post__item col-divide-4 col-divide-md-6 col-divide-sm-12 my-15">
                  <Link to={`/${blogItem.node.slug}`} className="Post__item-img d--block">
                    <img data-src={blogItem.node.featured_media.source_url} alt={blogItem.node.slug} className="lazyload"/>
