@@ -97,7 +97,7 @@ export default ({pageContext}) =>(
             Thông tin liên hệ
           </h3>
           <div className="sidebar__cotent">
-            <div className="mbt-5"><i className="fas fa-envelope icon text--primary"></i>Email: huyminhnguyenpham@gmail.com</div>
+            <div className="mbt-5"><i className="fas fa-envelope icon text--primary"></i>Email: info.wolfactive@gmail.com</div>
             <div className="mbt-5"><i className="fas fa-mobile icon text--primary"></i>Hotline: 032 717 2497</div>
           </div>
         </div>
