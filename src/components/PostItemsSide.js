@@ -33,9 +33,7 @@ const PostItemsSide = () =>{
                 <i className="far fa-calendar-alt"></i> {blogItem.node.date}
               </div>
               <Link className="Post__item-single-btn btn text--dark" to={`/${blogItem.node.slug}`} className="d--block">
-                <h4 className="Post__item-single-title title--item">
-                  {blogItem.node.title}
-                </h4>
+                <h4 className="Post__item-single-title title--item" dangerouslySetInnerHTML={{__html: blogItem.node.title}} />
               </Link>
               </div>
           </div>

@@ -33,9 +33,7 @@ const PostItems = () =>{
               <div className="date">
                 <i className="far fa-calendar-alt"></i> {blogItem.node.date}
               </div>
-              <h4 className="Post__item-title title--item">
-                {blogItem.node.title}
-              </h4>
+              <h4 className="Post__item-title title--item" dangerouslySetInnerHTML={{__html: blogItem.node.title}} />        
               <Link className="Post__item-btn btn text--dark" to={`/${blogItem.node.slug}`}>
                 Đọc Tiếp
               </Link>
