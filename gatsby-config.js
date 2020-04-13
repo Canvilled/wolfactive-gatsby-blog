@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Wolfactive Blogs Site`,
     author: `Wolfactive, Huy Nguyễn, Phương Nam`,
-    url: `http://blog.wolfactive.net/`,
-    siteUrl: `http://blog.wolfactive.net/`,
+    url: `https://wolfactive.dev/`,
+    siteUrl: `https://wolfactive.dev/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
