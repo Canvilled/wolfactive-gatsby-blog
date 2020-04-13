@@ -642,7 +642,16 @@ main .Post__item:hover  img{
 	overflow: hidden;
 }
 .blog__single .blog__single-contain .blog__single-content p{
-	margin: 0 0 0.5rem !important;
+	margin: 0 0 0.8rem !important;
+}
+.blog__single .blog__single-contain .blog__single-content a{
+	color: var(--primary-bg-color);
+	font-weight: 600;
+	transform: scale(1);
+	transition: all 0.3s ease-in;
+}
+.blog__single .blog__single-contain .blog__single-content a:hover{
+	transform: scale(1.05);
 }
 .blog__single .blog__single-contain .blog__single-content figure{
 	text-align: center;
