@@ -18,7 +18,7 @@ const IndexPage = ({data,pageContext}) => {
       <SEO
         title="Blog Home Wolfactive"
         description="Với nhiều năm kinh nghiệm trong lĩnh vực thiết kế, lập trình, tối ưu website...Wolfactive đã thực hiện hơn 300+ dự án lớn nhỏ cho các đối tác trong và ngoài nước. Chúng tôi tự tin mang đến giá trị khác biệt cho dự án của bạn!"
-        image="http://blog.wolfactive.net/icons/icon-256x256.png"
+        image="https://wolfactive.dev/icons/icon-256x256.png"
         keywords="Wolfactive, Thiết kế web Wolfactive, Thiết kế logo Wolfactive, Thiết kế đồ họa Wolfactive"
          />
        <Search/>
