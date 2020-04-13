@@ -95,6 +95,10 @@ function SEO({ description, lang, meta, title, keywords, image, slug}) {
           name: `google-site-verification`,
           content: `Ts-mhqfK6lCO3Uf3l0sUPcSjUb_k9uA3uMwUvNdWCck`,
         },
+        {
+          name: `google-site-verification`,
+          content: `My7PemNYk5gKXBvX0xs49l59FgYG5TFAzXTrQUCEntI`,
+        },
       ].concat(meta)}
     />
   )
