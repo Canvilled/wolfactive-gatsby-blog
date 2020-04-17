@@ -663,7 +663,6 @@ main .Post__item:hover  img{
 }
 .blog__single .blog__single-contain .blog__single-content iframe{
 	width:100%;
-	height: auto;
 }
 .blog__single .blog__single-contain img{
 	width: auto;
