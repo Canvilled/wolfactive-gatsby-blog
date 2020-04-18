@@ -28,8 +28,8 @@ export default ({pageContext}) =>{
   }
 };
 const getLanguage = node => {
-  if (node.attribs.class != null) {
-    return node.attribs.class;
+  if (((node.children[0].attribs.lang === 'javascript')||(node.children[0].attribs.lang === 'html')||(node.children[0].attribs.lang === 'php')||(node.children[0].attribs.lang === 'sql')||(node.children[0].attribs.lang === 'graphql')||(node.children[0].attribs.lang === 'java')&&(node.children[0].name === 'code')) ) {
+    return node.children[0].attribs.lang;
   }
   return null;
 };
