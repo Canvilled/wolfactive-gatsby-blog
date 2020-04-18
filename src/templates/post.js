@@ -28,8 +28,8 @@ export default ({pageContext}) =>{
   }
 };
 const getLanguage = node => {
-  if ((node.children[0].attribs.class != null) ) {
-    return node.children[0].attribs.class;
+  if ((node.attribs.class != null) ) {
+    return node.attribs.class;
   }
   return null;
 };
