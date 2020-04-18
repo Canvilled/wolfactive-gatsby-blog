@@ -28,7 +28,7 @@ export default ({pageContext}) =>{
   }
 };
 const getLanguage = node => {
-  if (((node.children[0].attribs.class === 'javascript')||(node.children[0].attribs.class === 'html')||(node.children[0].attribs.class === 'php')||(node.children[0].attribs.class === 'sql')||(node.children[0].attribs.class === 'graphql')||(node.children[0].attribs.class === 'java')&&(node.children[0].name === 'code')) ) {
+  if ((node.children[0].attribs.class != null) ) {
     return node.children[0].attribs.class;
   }
   return null;

@@ -5,6 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+import 'lazysizes'
 import "./src/style/all.css"
 import "./src/style/global.css"
 import "./src/style/responsive.css"
