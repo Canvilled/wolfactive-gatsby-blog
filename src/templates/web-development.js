@@ -12,95 +12,97 @@ export default ({data,pageContext}) =>{
   return (
     <PageTransition>
       <Layout>
-        <SEO title="Web Development"/>
-        <h2 className="title--section text--center my-15">Chuyên mục: WEB DEVDEVELOPMENT</h2>
-          <div className="row-divide my-50 pageTemplate--contain">
-            {pageContext.posts.map(blogItem =>(
-              <div
-                data-sal="slide-up"
-                data-sal-delay="300"
-                data-sal-easing="linear"
-                key={blogItem.node.id} className="Post__item col-divide-4 col-divide-md-6 col-divide-sm-12 my-15">
-                <Link to={`/${blogItem.node.slug}`} className="Post__item-img d--block">
-                  <img data-src={blogItem.node.featured_media.source_url} alt={blogItem.node.slug} className="lazyload"/>
-                </Link>
-                <div className="Post__item-content">
-                  <div className="date">
-                    <i className="far fa-calendar-alt"></i> {blogItem.node.date}
-                  </div>
-                  <h4 className="Post__item-title title--item" dangerouslySetInnerHTML={{__html: blogItem.node.title}}/>
-                  <Link className="Post__item-btn btn text--dark" to={`/${blogItem.node.slug}`}>
-                    Đọc Tiếp
+        <div className="container">
+          <SEO title="Web Development"/>
+          <h2 className="title--section text--center my-15">Chuyên mục: WEB DEVDEVELOPMENT</h2>
+            <div className="row-divide my-50 pageTemplate--contain">
+              {pageContext.posts.map(blogItem =>(
+                <div
+                  data-sal="slide-up"
+                  data-sal-delay="300"
+                  data-sal-easing="linear"
+                  key={blogItem.node.id} className="Post__item col-divide-4 col-divide-md-6 col-divide-sm-12 my-15">
+                  <Link to={`/${blogItem.node.slug}`} className="Post__item-img d--block">
+                    <img data-src={blogItem.node.featured_media.source_url} alt={blogItem.node.slug} className="lazyload"/>
                   </Link>
-                  </div>
-              </div>
-            ))}
-           </div>
-           <div className="pagination">
-              <div className="pagination__container">
-                {!isFirstPage && (
-                  <div className="pagination__item">
-                    <Link to={prevPage} rel="prev" className="pagination__number">
-                      Prev Page
+                  <div className="Post__item-content">
+                    <div className="date">
+                      <i className="far fa-calendar-alt"></i> {blogItem.node.date}
+                    </div>
+                    <h4 className="Post__item-title title--item" dangerouslySetInnerHTML={{__html: blogItem.node.title}}/>
+                    <Link className="Post__item-btn btn text--dark" to={`/${blogItem.node.slug}`}>
+                      Đọc Tiếp
                     </Link>
-                  </div>
-                )}
-                {((currentPage === 1 )&&(numberOfPages !== 1))&& (
-                  <>
-                  <div className="pagination__item">
-                    <Link to="web-development" rel="current" className="pagination__number active">
-                      {currentPage }
-                    </Link>
-                  </div>
-                  <div className="pagination__item">
-                    <Link to={nextPage} rel="nextPage" className="pagination__number">
-                      {currentPage + 1}
-                    </Link>
-                  </div>
-                  </>
-                )}
-                {((currentPage === numberOfPages)&&(currentPage !== 1)) && (
-                  <>
-                  <div className="pagination__item">
-                    <Link to={prevPage} rel="prevPage" className="pagination__number">
-                      {currentPage - 1}
-                    </Link>
-                  </div>
-                  <div className="pagination__item">
-                    <Link to="web-development" rel="current" className="pagination__number active">
-                      {currentPage }
-                    </Link>
-                  </div>
-                  </>
-                )}
-                {((currentPage !== numberOfPages)&&(currentPage !== 1))  && (
-                  <>
-                  <div className="pagination__item">
-                    <Link to={prevPage} rel="prevPage" className="pagination__number">
-                      {currentPage - 1}
-                    </Link>
-                  </div>
-                  <div className="pagination__item">
-                    <Link to="web-development" rel="current" className="pagination__number active">
-                      {currentPage }
-                    </Link>
-                  </div>
-                  <div className="pagination__item">
-                    <Link to={nextPage} rel="nextPage" className="pagination__number">
-                      {currentPage +1}
-                    </Link>
-                  </div>
-                  </>
-                )}
-                {!isLastPage && (
-                  <div className="pagination__item">
-                    <Link to={nextPage} rel="next" className="pagination__number">
-                      Next Page
-                    </Link>
-                  </div>
-                )}
-              </div>
-           </div>
+                    </div>
+                </div>
+              ))}
+             </div>
+             <div className="pagination">
+                <div className="pagination__container">
+                  {!isFirstPage && (
+                    <div className="pagination__item">
+                      <Link to={prevPage} rel="prev" className="pagination__number">
+                        Prev Page
+                      </Link>
+                    </div>
+                  )}
+                  {((currentPage === 1 )&&(numberOfPages !== 1))&& (
+                    <>
+                    <div className="pagination__item">
+                      <Link to="web-development" rel="current" className="pagination__number active">
+                        {currentPage }
+                      </Link>
+                    </div>
+                    <div className="pagination__item">
+                      <Link to={nextPage} rel="nextPage" className="pagination__number">
+                        {currentPage + 1}
+                      </Link>
+                    </div>
+                    </>
+                  )}
+                  {((currentPage === numberOfPages)&&(currentPage !== 1)) && (
+                    <>
+                    <div className="pagination__item">
+                      <Link to={prevPage} rel="prevPage" className="pagination__number">
+                        {currentPage - 1}
+                      </Link>
+                    </div>
+                    <div className="pagination__item">
+                      <Link to="web-development" rel="current" className="pagination__number active">
+                        {currentPage }
+                      </Link>
+                    </div>
+                    </>
+                  )}
+                  {((currentPage !== numberOfPages)&&(currentPage !== 1))  && (
+                    <>
+                    <div className="pagination__item">
+                      <Link to={prevPage} rel="prevPage" className="pagination__number">
+                        {currentPage - 1}
+                      </Link>
+                    </div>
+                    <div className="pagination__item">
+                      <Link to="web-development" rel="current" className="pagination__number active">
+                        {currentPage }
+                      </Link>
+                    </div>
+                    <div className="pagination__item">
+                      <Link to={nextPage} rel="nextPage" className="pagination__number">
+                        {currentPage +1}
+                      </Link>
+                    </div>
+                    </>
+                  )}
+                  {!isLastPage && (
+                    <div className="pagination__item">
+                      <Link to={nextPage} rel="next" className="pagination__number">
+                        Next Page
+                      </Link>
+                    </div>
+                  )}
+                </div>
+             </div>
+        </div>
       </Layout>
     </PageTransition>
   )

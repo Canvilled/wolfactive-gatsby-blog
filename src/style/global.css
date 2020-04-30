@@ -628,6 +628,56 @@ main .Post__item:hover  img{
 	width:100%;
 }
 /*----Bottom Nav----*/
+/*----Carousel----*/
+.carousel{
+  height: 320px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+.carousel::after{
+  content: "";
+  display: block;
+  background: #383333a1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transition: all 0.3s linear;
+}
+.carousel img{
+  height: 320px;
+  width: auto;
+  transform: scale(1);
+  transition: all 0.3s linear;
+}
+.carousel:hover img{
+  transform: scale(1.15);
+}
+.carousel:hover::after{
+  background: #1c6182b8;
+}
+.carousel .carousel__title {
+  position: absolute;
+  z-index: 100;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+}
+.alice-carousel__dots{
+  position: absolute;
+  z-index: 1000;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.alice-carousel__dots-item:hover, .alice-carousel__dots-item.__active{
+  background-color: #1c6182!important;
+}
+/*----Carousel----*/
 /*----Single Blog----*/
 .blog__single .col-divide-9{
 	background: #fff;
