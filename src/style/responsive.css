@@ -162,4 +162,8 @@
   .search .search__result{
     top:26px;
   }
+  .carousel .carousel__title{
+    top:35%;
+    font-size: 20px;
+  }
 }
