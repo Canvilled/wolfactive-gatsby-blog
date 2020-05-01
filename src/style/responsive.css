@@ -6,7 +6,11 @@
     -moz-osx-font-smoothing: grayscale;
     color: var(--primary-color);
 }
-
+@media screen and (max-width: 1367px) {
+  .carousel .carousel__title{
+    font-size: 23px;
+  }
+}
 @media screen and (max-width: 1024px) {
 	.main_menu.main_menu_hide_on_mobile{
 		display:none;
