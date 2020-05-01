@@ -13,12 +13,12 @@ export default class Slider extends Component {
     const{sliderData} = this.props;
     const elm = sliderData.map(sliderItem => {
       return (
-        <Link key={sliderItem.node.id} to={sliderItem.node.slug} className="carousel" onDragStart={handleOnDragStart}>
+        <div key={sliderItem.node.id} className="carousel" onDragStart={handleOnDragStart}>
            <img data-src={sliderItem.node.featured_media.source_url} alt={sliderItem.node.slug} className="lazyload"/>
-           <div className="carousel__title title--section">
+           <Link className="carousel__title title--section" to={sliderItem.node.slug}>
              {sliderItem.node.title}
-           </div>
-        </Link>
+           </Link>
+        </div>
       );
     });
 
